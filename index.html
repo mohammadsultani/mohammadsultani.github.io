@@ -8,53 +8,96 @@
     <title>Mohammad Sultani Portfolio</title>
   </head>
   <body>
-    <main class="min-h-screen h-full w-full flex">
+    <main
+      class="
+        min-h-screen
+        h-full
+        w-full
+        flex flex-col
+        md:flex-row
+        relative
+        md:static
+      "
+    >
       <!-- The navbar is going to be a sidebar in wide screens -->
       <nav
         class="
           bg-blue-400
-          w-44
-          h-screen
-          flex flex-col
-          justify-center
-          items-center
+          sticky
+          top-0
+          md:static
+          h-16
+          md:w-44 md:h-screen
+          flex flex-row
+          md:flex-col md:justify-center md:items-center
+          justify-around
         "
       >
-        <button class="text-white mb-4 underline">About</button>
-        <button class="text-white mt-4 underline">Projects</button>
+        <button class="text-white md:mb-4 underline">About</button>
+        <button class="text-white md:mt-4 underline">Projects</button>
       </nav>
       <!--  The main sections -->
 
       <!-- About -->
       <section
-        class="w-full h-screen flex flex-col justify-center items-center"
+        class="
+          w-full
+          h-full
+          md:h-screen
+          flex flex-col
+          justify-center
+          items-center
+          mt-8
+          md:mt-0
+          px-4
+          md:px-0
+        "
       >
         <img
           src="./profile.jpg"
           alt="Profile photo"
-          class="w-48 h-48 rounded-full bg-cover mb-4"
+          class="w-32 h-32 md:w-48 md:h-48 rounded-full bg-cover mb-4"
         />
-        <h1 class="mb-2 text-lg">
+        <h1 class="mb-2 md:text-lg">
           Hey, I am <span class="font-bold">Mohammad Sultani</span>
         </h1>
-        <p class="mb-1">
+        <p class="mb-2 text-sm md:text-base md:text-base">
           I am a full-stack web developer who loves teamwork and enjoys
           debating.
         </p>
-        <p class="mb-1 w-4/5 mx-auto text-center">
+        <p class="mb-1 md:w-4/5 mx-auto text-sm md:text-base">
           I have taken part in developing several web application projects, from
           an online marketplace to web based restaurant ordering system. My goal
           is to have a positive impact on people and the environment around me.
         </p>
-        <div class="w-40 flex justify-between mx-auto absolute bottom-6">
+        <div
+          class="
+            mt-10
+            md:mt-0
+            w-32
+            md:w-40
+            flex
+            justify-between
+            mx-auto
+            md:absolute md:bottom-6
+          "
+        >
           <a href="https://github.com/mohammadsultani">
-            <img src="./github-logo.png" alt="" class="w-8 h-8" />
+            <img src="./github-logo.png" alt="" class="w-6 h-6 md:w-8 md:h-8" />
           </a>
           <a href="https://www.linkedin.com/in/mohammad-sultani/">
-            <img src="./linkedin-logo.png" alt="" class="w-8 h-8" />
+            <img
+              src="./linkedin-logo.png"
+              alt=""
+              class="w-6 h-6 md:w-8 md:h-8"
+            />
           </a>
           <a href="https://www.instagram.com/mohm_sultani/">
-            <img src="./instagram-logo.png" alt="" class="w-8 h-8" />
+            <img
+              src="./instagram-logo.png"
+              alt=""
+              class="w-6 h-6 md:w-8 md:h-8"
+            />
           </a>
         </div>
       </section>
