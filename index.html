@@ -31,15 +31,27 @@
           flex flex-row
           md:flex-col md:justify-center md:items-center
           justify-around
+          md:text-xl
         "
       >
-        <button class="text-white md:mb-4 md:underline">About</button>
-        <button class="text-white md:mt-4 md:underline">Projects</button>
+        <button
+          id="about-button"
+          class="text-white md:mb-4 md:underline"
+          onclick="toggleSection('about')"
+        >
+          About
+        </button>
+        <button
+          id="projects-button"
+          class="text-white md:mt-4"
+          onclick="toggleSection('projects')"
+        >
+          Projects
+        </button>
       </nav>
-      <!--  The main sections -->
-
-      <!-- About -->
+      <!-- About Section -->
       <section
+        id="about-section"
         class="
           w-full
           h-full
@@ -65,7 +77,7 @@
           I am a full-stack web developer who loves teamwork and enjoys
           debating.
         </p>
-        <p class="mb-1 md:w-4/5 mx-auto text-sm md:text-base">
+        <p class="mb-1 md:w-4/5 mx-auto text-sm md:text-base md:text-center">
           I have taken part in developing several web application projects, from
           an online marketplace to web based restaurant ordering system. My goal
           is to have a positive impact on people and the environment around me.
@@ -101,6 +113,86 @@
           </a>
         </div>
       </section>
+
+      <!--                       Projects sections                                     -->
+      <section
+        class="hidden max-w-4xl w-full mx-auto h-full"
+        id="projects-section"
+      >
+        <h1 class="text-center mt-8 mx-2 text-sm md:text-lg">
+          These are some of the major
+          <span class="font-semibold">projects</span> that I have contributed to
+        </h1>
+        <div class="mt-8 w-4/5 mx-auto">
+          <h1
+            class="
+              md:text-4xl
+              text-xl
+              font-bold
+              text-blue-600
+              underline
+              tracking-wider
+            "
+          >
+            <a href="https://limitd.io/" rel="Link to a sneaker marketplace"
+              >Limitd</a
+            >
+          </h1>
+          <p class="mt-4 text-sm md:text-base">
+            Limitd is Malaysia's first virtual authentic and original sneaker
+            marketplace that helps to connect sellers and buyers from across the
+            country.
+          </p>
+          <p class="mt-2 text-sm md:text-base">
+            I was contributing to the development of web application as a
+            frontend developer, An interesting part for me was integrating the
+            web app with a third-party delivery service.
+          </p>
+        </div>
+        <!-- In-house web ordering system for restaurants -->
+        <div class="mt-6 mb-10 w-4/5 mx-auto">
+          <h1 class="md:text-xl md:font-semibold text-blue-600">
+            In-house F&B web ordering web application
+          </h1>
+          <p class="mt-2 text-sm md:text-base">
+            Have you dine-in in a restaurant where you had to wait for 20
+            minutes just to place your order with the waiter because the outlet
+            was busy.
+          </p>
+          <p class="mt-2 text-sm md:text-base">
+            Well, this app is solving that common problem for F&B outlets. using
+            this web app the diners can place their orders from their preferred
+            browser, and the submitted orders will send to the restaurant POS
+            system automatically.
+          </p>
+          <a
+            href="https://www.linkedin.com/posts/mohammad-sultani_restaurant-website-digitalization-activity-6844524289677492224-7pWx"
+            class="underline text-sm md:text-base text-blue-600 mt-3"
+            >Link to the product video picth</a
+          >
+        </div>
+      </section>
     </main>
+    <script>
+      const aboutSection = document.getElementById("about-section");
+      const projectsSection = document.getElementById("projects-section");
+      const aboutButton = document.getElementById("about-button");
+      const projectsButton = document.getElementById("projects-button");
+      const toggleSection = (e) => {
+        if (e == "projects") {
+          aboutSection.classList.add("hidden");
+          aboutButton.classList.remove("md:underline");
+          projectsSection.classList.remove("hidden");
+          projectsSection.classList.add("block");
+          return projectsButton.classList.add("md:underline");
+        } else {
+          projectsSection.classList.remove("block");
+          projectsButton.classList.remove("md:underline");
+          projectsSection.classList.add("hidden");
+          aboutButton.classList.add("md:underline");
+          return aboutSection.classList.remove("hidden");
+        }
+      };
+    </script>
   </body>
 </html>
