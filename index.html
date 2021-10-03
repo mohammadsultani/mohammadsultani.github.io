@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/tailwind.css" rel="stylesheet" />
+    <title>Mohammad Sultani Portfolio</title>
+  </head>
+  <body>
+    <main class="min-h-screen h-full w-full flex">
+      <!-- The navbar is going to be a sidebar in wide screens -->
+      <nav
+        class="
+          bg-blue-400
+          w-44
+          h-screen
+          flex flex-col
+          justify-center
+          items-center
+        "
+      >
+        <button class="text-white mb-4 underline">About</button>
+        <button class="text-white mt-4 underline">Projects</button>
+      </nav>
+      <!--  The main sections -->
+
+      <!-- About -->
+      <section
+        class="w-full h-screen flex flex-col justify-center items-center"
+      >
+        <img
+          src="./profile.jpg"
+          alt="Profile photo"
+          class="w-48 h-48 rounded-full bg-cover mb-4"
+        />
+        <h1 class="mb-2 text-lg">
+          Hey, I am <span class="font-bold">Mohammad Sultani</span>
+        </h1>
+        <p class="mb-1">
+          I am a full-stack web developer who loves teamwork and enjoys
+          debating.
+        </p>
+        <p class="mb-1 w-4/5 mx-auto text-center">
+          I have taken part in developing several web application projects, from
+          an online marketplace to web based restaurant ordering system. My goal
+          is to have a positive impact on people and the environment around me.
+        </p>
+        <div class="w-40 flex justify-between mx-auto absolute bottom-6">
+          <a href="https://github.com/mohammadsultani">
+            <img src="./github-logo.png" alt="" class="w-8 h-8" />
+          </a>
+          <a href="https://www.linkedin.com/in/mohammad-sultani/">
+            <img src="./linkedin-logo.png" alt="" class="w-8 h-8" />
+          </a>
+          <a href="https://www.instagram.com/mohm_sultani/">
+            <img src="./instagram-logo.png" alt="" class="w-8 h-8" />
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
