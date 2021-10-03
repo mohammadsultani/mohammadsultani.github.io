@@ -11,7 +11,7 @@
     <main
       class="
         min-h-screen
-        h-full
+        max-h-full
         w-full
         flex flex-col
         md:flex-row
@@ -25,25 +25,24 @@
           bg-blue-400
           sticky
           top-0
-          md:static
           h-16
           md:w-44 md:h-screen
           flex flex-row
-          md:flex-col md:justify-center md:items-center
+          md:flex-col
           justify-around
-          md:text-xl
+          md:justify-center md:text-xl md:relative
         "
       >
         <button
           id="about-button"
-          class="text-white md:mb-4 md:underline"
+          class="text-white md:underline md:mb-4 md:sticky top-2"
           onclick="toggleSection('about')"
         >
           About
         </button>
         <button
           id="projects-button"
-          class="text-white md:mt-4"
+          class="text-white md:sticky md:mt-4 top-2"
           onclick="toggleSection('projects')"
         >
           Projects
@@ -73,11 +72,13 @@
         <h1 class="mb-2 md:text-lg">
           Hey, I am <span class="font-bold">Mohammad Sultani</span>
         </h1>
-        <p class="mb-2 text-sm md:text-base md:text-base">
+        <p class="mb-2 text-sm md:text-base md:text-base mx-6 md:mx-0">
           I am a full-stack web developer who loves teamwork and enjoys
           debating.
         </p>
-        <p class="mb-1 md:w-4/5 mx-auto text-sm md:text-base md:text-center">
+        <p
+          class="mb-1 md:w-4/5 mx-6 md:mx-0 text-sm md:text-base md:text-center"
+        >
           I have taken part in developing several web application projects, from
           an online marketplace to web based restaurant ordering system. My goal
           is to have a positive impact on people and the environment around me.
@@ -171,6 +172,22 @@
             >Link to the product video picth</a
           >
         </div>
+        <!-- <div>
+          <p>cadklncncdddddddddddddd</p>
+          <p>cadklncncdddddddddddddd</p>
+          <p>cadklncncdddddddddddddd</p>
+          <p>cadklncncdddddddddddddd</p>
+          <p>cadklncncdddddddddddddd</p>
+          <p>cadklncncdddddddddddddd</p>
+          <p>cadklncncdddddddddddddd</p>
+          <p>cadklncncdddddddddddddd</p>
+          <p>cadklncncdddddddddddddd</p>
+          <p>cadklncncdddddddddddddd</p>
+          <p>cadklncncdddddddddddddd</p>
+          <p>cadklncncdddddddddddddd</p>
+          <p>cadklncncdddddddddddddd</p>
+          <p>cadklncncdddddddddddddd</p>
+        </div> -->
       </section>
     </main>
     <script>
