@@ -1,0 +1,15 @@
+#about-section,
+#projects-section {
+  animation: 2s ease-out 0s 1 FadeIn;
+}
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
